@@ -1,0 +1,10 @@
+{
+  "name": "Recity — Reuse it or report it",
+  "short_name": "Recity",
+  "description": "A civic waste-management and reuse companion.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f8faf7",
+  "theme_color": "#0b7a3b",
+  "icons": [{ "src": "assets/icons/recity-mark.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

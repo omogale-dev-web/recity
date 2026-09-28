@@ -1,0 +1,9 @@
+.env
+.env.local
+.env.*.local
+.vercel
+node_modules
+*.log
+dist/
+.openai/
+work/

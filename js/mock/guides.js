@@ -1,0 +1,1 @@
+export const guide={title:'planter',difficulty:'easy',time:'fifteen',materials:['plasticBottle','soil','plant'],tools:['scissors','marker'],steps:['guideStep1','guideStep2','guideStep3','guideStep4'],safety:'guideSafety'};
