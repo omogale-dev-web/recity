@@ -16,7 +16,10 @@ export async function ensureIdentity() {
 }
 
 export async function getMyProfile() {
-  const { data, error } = await supabase.from('profiles').select('recity_id, role').maybeSingle();
+  const { data: { user }, error: authError } = await supabase.auth.getUser();
+  if (authError) throw authError;
+  if (!user) throw new Error('ReCity identity is not available');
+  const { data, error } = await supabase.from('profiles').select('recity_id, role').eq('id', user.id).single();
   if (error) throw error;
   return data;
 }
