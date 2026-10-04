@@ -40,7 +40,7 @@ declare result public.collector_requests;
 begin
   if not public.is_municipal_operator() then raise exception 'Admin access required'; end if;
   update public.collector_requests
-  set status = case when p_approved then 'approved' else 'rejected' end,
+  set status = (case when p_approved then 'approved' else 'rejected' end)::public.collector_request_status,
       reviewed_by = auth.uid(), reviewed_at = now()
   where id = p_request_id and status = 'pending'
   returning * into result;
