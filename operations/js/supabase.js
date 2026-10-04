@@ -15,9 +15,10 @@ export async function ensureIdentity() {
   return session.user;
 }
 
-export async function claimAdmin(code) {
-  const { error } = await supabase.rpc('claim_operations_admin', { p_code: code });
+export async function getMyProfile() {
+  const { data, error } = await supabase.from('profiles').select('recity_id, role').maybeSingle();
   if (error) throw error;
+  return data;
 }
 
 export async function requestCollector(displayName) {
