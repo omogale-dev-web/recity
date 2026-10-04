@@ -1,5 +1,5 @@
-const CACHE = 'recity-shell-v1';
-const SHELL = ['./', './index.html', './css/variables.css', './css/base.css', './css/components.css', './css/responsive.css', './js/app.js', './js/config.js'];
+const CACHE = 'recity-shell-v2';
+const SHELL = ['./', './index.html', './css/variables.css', './css/base.css', './css/components.css', './css/responsive.css', './js/app.js', './js/config.js', './assets/images/clean-city-background.png'];
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL))));
 self.addEventListener('activate', event => event.waitUntil(self.clients.claim()));
 self.addEventListener('fetch', event => {
