@@ -1,0 +1,12 @@
+/* ReCity's clean green smart-city background, kept separate for easy tuning. */
+body::before {
+  background-image:
+    linear-gradient(120deg, rgba(248, 250, 247, .86), rgba(248, 250, 247, .58)),
+    url("../assets/images/recity-smart-green-city.png");
+}
+
+[data-theme="dark"] body::before {
+  background-image:
+    linear-gradient(120deg, rgba(16, 24, 20, .84), rgba(16, 24, 20, .62)),
+    url("../assets/images/recity-smart-green-city.png");
+}
